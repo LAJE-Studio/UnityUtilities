@@ -2,14 +2,19 @@
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace UnityUtilities.Misc {
+namespace UnityUtilities.Serializable
+{
     [Serializable]
-    public class SerializableInterface<T> where T : class {
-        public T Value {
-            get {
+    public class SerializableInterface<T> where T : class
+    {
+        public T Value
+        {
+            get
+            {
                 return Object as T;
             }
-            set {
+            set
+            {
                 Object = value as Object;
             }
         }
